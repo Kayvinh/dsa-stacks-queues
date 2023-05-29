@@ -1,16 +1,5 @@
 const { LinkedList, Node } = require("./linkedlist");
 
-/** Node: node for a queue. */
-
-// class Node {
-//   val = null;
-//   next = null;
-
-//   constructor(val) {
-//     this.val = val;
-//   }
-// }
-
 /** Queue: chained-together nodes where you can
  *  remove from the front or add to the back. */
 
@@ -56,13 +45,16 @@ class Queue {
   /** peek(): return the value of the first node in the queue. */
 
   peek() {
-
+    return this.first.val;
   }
 
   /** isEmpty(): return true if the queue is empty, otherwise false */
 
   isEmpty() {
-
+    if (!this.size) {
+      return true;
+    }
+    return false;
   }
 }
 
